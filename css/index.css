@@ -1,4 +1,7 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -60,115 +63,270 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
 /* Your code starts here! */
-body {
+
+.container{
+	width: 876px;
 	margin: 0 auto;
-	width: 900px;
+}
+/* Style for the header */
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 35px;
 }
 
-a {
+header nav a{
+	margin: 0 25px;
+	color: silver;
 	text-decoration: none;
-	color: lightgrey;
-	font-size: 14px;
+	
 }
 
-nav {
-	padding: 40px 0 70px 0;
-	word-spacing: 50px;
+/*Style for the intro section */
+.intro{
+	display: flex;
+	justify-content: space-around; 
+	align-items: center;
+	border-bottom: 1px solid black;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
-nav a:first-child {
-	padding-left: 0;
-}
-
-.logo {
-	display: inline-block;
-	padding-left: 120px;
-}
-
-header {
-	text-align: center;
-}
-
-h1 {
-	font-size: 75px;
-	display: inline-block;
-	margin-top: 60px;
-}
-
-.circleimg {
-	display: inline-block;
-}
-
-.headerwithbutton {
-	width: 420px;
-	display: inline-block;
-}
-
-.right {
-	display: inline-block;
-	width: 420px;
-	vertical-align: top;
-}
-
-.getstarted {
-	display: block;
-	background-color: white;
-	font-size: 18px;
-	padding: 3px 45px;
-	text-decoration: none;
+.button1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 30px;
 	border: 1px solid black;
-	margin: 0 auto;
-	font-family: 'Titillium Web';
+	margin-left: 80px;
+	font-size: 15px;
 }
 
-hr {
-	color: black;
-	background-color: black;
-	height: 1px;
-	width: 95%;
-	margin: 60px 0 0 0;
-	border: none;
-}
-
-.featuresabout {
-	display: inline-block;
-	width: 420px;
-	margin-bottom: 40px;
-}
-
-h2 {
-	font-size: 17px;
-	display: block;
-	margin: 25px 0;
-}
-
-.serprovis {
-	display: inline-block;
-	width: 280px;
-	margin: 5px;
-}
-
-p {
-	line-height: 1.2;
-}
-
-footer {
+.introtext{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 80px;
 	text-align: center;
-	height: 100px;
-	padding: 20px;
-	font-size: 14px;
 }
 
-.hr2 {
+/** Style for the features and about section, image, and servcies products vision **/
+.content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: space-between;
+	padding-top: 20px;
+}
+
+.contentpt1{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+
+.contentpt2{
+	display: flex;
+	justify-content: center;
+	padding-top: 40px;
+}
+
+.contentpt3{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 40px;
+}
+
+.services, .product, .vision{
+	width: 33%;
+}
+
+/** Style for contact **/
+.contact{
+	margin-top: 50px;
+	border-top: 1px solid black;
+}
+
+
+/** Style for footer **/
+footer{
+	padding-top: 50px;
+	text-align: center;
+}
+
+/** CSS STYLING FOR SECOND PAGE **/
+
+.container2{
+	width: 900px;
+	margin: 0 auto;
+}
+
+
+/** styling for header **/
+.container2 header{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 35px;
+}
+.sec1{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 35px;
+}
+
+.sec1 nav{
+	width: 880px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: -10px;
+}
+
+.container2 header nav a{
+	/*margin: 0 25px;*/
+	color: silver;
+	text-decoration: none;	
+}
+
+.sec2{
+	padding-bottom: 30px;
+}
+/* styling for services */
+
+.service2{
+	width: 880px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 10px;
+	line-height: 140%;
+	padding-bottom: 30px;
+	border-bottom: 1px solid black;
+}
+
+/* Styling for all the toggle boxes */
+
+#learnmore{
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-between;
+	border-bottom: 1px solid black;
+	padding-bottom: 30px;
+}
+
+.digitaldesign, .uxui, .digimarket, .webdev, .ios, .android{
+	display: flex;
+	width: 45%;
+	padding: 15px;
+	border: 1px solid black;
+	background-color: whitesmoke;
+	padding-bottom: 30px;
+	line-height: 125%;
+	margin: 15px 15px;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6{
+	box-sizing: border-box;
+	line-height: 130%;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6 p{
+	line-height: 130%;
+}
+
+.box1 button, .box2 button, .box3 button, .box4 button, .box5 button, .box6 button{
+	margin-top: 25px;
 	color: black;
-	background-color: black;
-	height: 1px;
-	width: 95%;
-	margin: 40px 0 0 0;
-	border: none;
+	background-color: white;
+	padding:10px 30px;
+	border-radius: 5px;
+	border-color: black;
 }
 
-address {
-	line-height: 1.2;
+/* Styling for the service facts section */
+
+#servicefacts{
+	width: 880px;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+}
+
+.somefacts{
+	width: 47%;
+}
+
+.somefacts p{
+	line-height: 140%;
+}
+
+ul{
+	margin-left: 20px;
+	list-style-type: square;
+	line-height: 160%;
+}	
+@media (max-width: 800px){
+    *{
+        width: 100%;
+    }
+    .top{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+    }
+    .logopic{
+        display: flex;
+        justify-content: center;
+    }
+    .right{
+        display: none;
+    }
+    .headerwithbutton{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    button{
+
+    }
+    footer{
+       display: flex;
+       justify-content: center;
+    }
+}
+
+@media (max-width: 500px){
+
 }
