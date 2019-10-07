@@ -300,30 +300,45 @@ ul{
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
+        align-items: center;
     }
-    .navbar{
+    .top nav{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        
     }
-    .logopic{
-        display: flex;
-        justify-content: center;
+    .top img{
+        width: 22.5%;
+        margin-bottom: 30px;
     }
-    .right{
+    .circleimg{
         display: none;
     }
-    .headerwithbutton{
-        width: 60%;
+    .introtext{
         display: flex;
-        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        line-height: 0.8;
     }
-    button{
-
+    .button1{
+        margin-top: 15px;
+        margin-left: 0;
     }
-    footer{
-       display: flex;
-       justify-content: center;
+   
+    .content{
+        margin-left: 3%;
+        width: 95%;
+    }
+    .contentpt1 div{
+        width: 49%;
+    }
+    .contentpt3 div{
+        width: 29%;
+    }
+    .contact{
+        margin-left: 3%;
     }
 }
 
